@@ -1,0 +1,14 @@
+
+
+.home{
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    flex-direction: column; 
+    background-color: darkgray;
+}
+
+h1{
+    color: brown;
+}

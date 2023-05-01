@@ -40,8 +40,8 @@ const server = http.createServer(function (req,res) {
                 res.end();
             }
         });
-    }else if(req.url === 'style.css'){
-        fs.readFile('./public/style.css','utf-8',function (error,data) {
+    }else if(req.url === '/style.css'){
+        fs.readFile('style.css','utf-8',function (error,data) {
             if(error){
                 res.writeHead(404,{'content-type':'text/css'});
                 res.write('not add css');
