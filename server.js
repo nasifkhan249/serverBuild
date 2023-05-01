@@ -40,6 +40,18 @@ const server = http.createServer(function (req,res) {
                 res.end();
             }
         });
+    }else if(req.url === 'style.css'){
+        fs.readFile('./public/style.css','utf-8',function (error,data) {
+            if(error){
+                res.writeHead(404,{'content-type':'text/css'});
+                res.write('not add css');
+                res.end();
+            }else{
+                res.writeHead(200,{'content-type':'text/css'});
+                res.write(data);
+                res.end();
+            }
+        })
     }else{
         res.writeHead(404);
         res.write('404 page not found');
